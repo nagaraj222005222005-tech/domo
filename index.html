@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - Modern UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">♪</div>
+                <span>SoundWave</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-nav="home">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="#" class="nav-item" data-nav="search">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-label">Search</span>
+                </a>
+                <a href="#" class="nav-item" data-nav="library">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-label">Library</span>
+                </a>
+            </nav>
+
+            <div class="theme-toggle">
+                <button id="themeBtn" class="theme-btn" title="Toggle theme">🌙</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Trending Now</h1>
+                <div class="header-controls">
+                    <input type="text" class="search-box" placeholder="Search albums...">
+                </div>
+            </div>
+
+            <!-- Album Grid -->
+            <section class="albums-grid">
+                <div class="album-card" data-album="1">
+                    <div class="album-image">
+                        <div class="album-art gradient-1"></div>
+                        <div class="play-overlay">
+                            <button class="play-btn-album">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Neon Dreams</h3>
+                        <p class="album-artist">Synthwave Master</p>
+                    </div>
+                </div>
+
+                <div class="album-card" data-album="2">
+                    <div class="album-image">
+                        <div class="album-art gradient-2"></div>
+                        <div class="play-overlay">
+                            <button class="play-btn-album">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Cyber Pulse</h3>
+                        <p class="album-artist">Digital Echo</p>
+                    </div>
+                </div>
+
+                <div class="album-card" data-album="3">
+                    <div class="album-image">
+                        <div class="album-art gradient-3"></div>
+                        <div class="play-overlay">
+                            <button class="play-btn-album">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Midnight Code</h3>
+                        <p class="album-artist">Lunar Sound</p>
+                    </div>
+                </div>
+
+                <div class="album-card" data-album="4">
+                    <div class="album-image">
+                        <div class="album-art gradient-4"></div>
+                        <div class="play-overlay">
+                            <button class="play-btn-album">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Electric Storm</h3>
+                        <p class="album-artist">Voltage Wave</p>
+                    </div>
+                </div>
+
+                <div class="album-card" data-album="5">
+                    <div class="album-image">
+                        <div class="album-art gradient-5"></div>
+                        <div class="play-overlay">
+                            <button class="play-btn-album">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Crystal Nights</h3>
+                        <p class="album-artist">Aurora Vibes</p>
+                    </div>
+                </div>
+
+                <div class="album-card" data-album="6">
+                    <div class="album-image">
+                        <div class="album-art gradient-6"></div>
+                        <div class="play-overlay">
+                            <button class="play-btn-album">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Pixel Paradise</h3>
+                        <p class="album-artist">Retro Future</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bottom Music Player Bar -->
+    <footer class="music-player">
+        <div class="player-container">
+            <!-- Album Artwork -->
+            <div class="player-artwork">
+                <div class="album-rotating gradient-1"></div>
+            </div>
+
+            <!-- Song Info -->
+            <div class="player-info">
+                <h3 class="song-title">Neon Dreams</h3>
+                <p class="song-artist">Synthwave Master</p>
+            </div>
+
+            <!-- Player Controls -->
+            <div class="player-controls">
+                <button class="control-btn" id="prevBtn" title="Previous">⏮</button>
+                <button class="control-btn play-btn" id="playBtn" title="Play/Pause">▶</button>
+                <button class="control-btn" id="nextBtn" title="Next">⏭</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="player-progress">
+                <span class="time current-time">0:00</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        <div class="progress-dot"></div>
+                    </div>
+                </div>
+                <span class="time total-time">3:45</span>
+            </div>
+
+            <!-- Equalizer -->
+            <div class="equalizer">
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-control">
+                <span class="volume-icon">🔊</span>
+                <input type="range" class="volume-slider" min="0" max="100" value="70">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Elements -->
+    <div class="background-blur"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
